@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calories Estimator</title>
+</head>
+<body>
+    <h1>Welcome to the Food Calorie calculator/estimator Playground</h1>
+    {% with messages = get_flashed_messages() %}
+     {% if messages %}
+      <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+     {% endif %}
+    {% endwith %}
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image" /><br/>
+        <button type="submit">Do upload</button>
+    </form>
+</body>
+</html>
